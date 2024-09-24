@@ -5,18 +5,10 @@ from ape.auto_prompter import PromptBuilderAgent
 if __name__ == "__main__":
     # Configure loguru to output to a file as well as the console
     logger.add("agent_log.log", rotation="10 MB")
-
-    # Get the OpenAI API key from the environment variable
-    api_key = os.getenv("OPENAI_API_KEY")
-
-    if api_key is None:
-        logger.error(
-            "OPENAI_API_KEY is not set in environment variables."
-        )
-        exit(1)
-
+    
+    
     # Initialize the prompt builder agent
-    agent = PromptBuilderAgent(api_key=api_key)
+    agent = PromptBuilderAgent()
 
     # Run the task multiple times (iterations parameter)
     task = "How can I establish a ROTH IRA to buy stocks and get a tax break? What are the criteria?"
