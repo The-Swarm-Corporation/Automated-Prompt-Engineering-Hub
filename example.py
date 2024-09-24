@@ -11,8 +11,8 @@ if __name__ == "__main__":
     agent = PromptBuilderAgent()
 
     # Run the task multiple times (iterations parameter)
-    task = "How can I establish a ROTH IRA to buy stocks and get a tax break? What are the criteria?"
-    agent_name = "Financial-Analysis-Agent"
+    task = "Generate an system prompt for an agent analyzes balance sheets"
+    agent_name = "Balance-Sheet-Agent-1"
 
     # Example: Run the task 3 times and save the results to JSON
     prompts = agent.run_task(
